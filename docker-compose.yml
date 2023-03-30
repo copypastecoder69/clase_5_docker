@@ -1,0 +1,13 @@
+version: '3'
+
+volumes:
+  nginx_volume:
+
+services:
+  tarea:
+    build:
+      dockerfile: 'Dockerfile'
+    ports:
+      - '800:80'
+    volumes:
+      - 'nginx_volume:/usr/share/nginx/html'
